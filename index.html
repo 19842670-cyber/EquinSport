@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EquiSports | Inicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🐴 <span>EquiSports</span></div>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="javascript.html">JavaScript</a>
+        <a href="jquery.html">jQuery</a>
+        <a href="json.html">JSON</a>
+        <a href="hosting.html">Hosting</a>
+        <a href="cuestionario.html">Cuestionario</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-contenido">
+        <p class="etiqueta">PASIÓN POR LOS CABALLOS</p>
+
+        <h1>
+            Todo para tu
+            <span>compañero equino.</span>
+        </h1>
+
+        <p>
+            Bienvenido a EquiSports, un sitio web dedicado
+            al mundo de los caballos y a las tecnologías web.
+        </p>
+
+        <a href="#productos" class="boton">VER PRODUCTOS</a>
+    </div>
+</section>
+
+<section class="seccion">
+    <p class="etiqueta">EQUISPORTS</p>
+    <h2>Calidad para cada aventura</h2>
+
+    <p class="descripcion">
+        Conoce algunos productos para jinetes y caballos,
+        mientras descubres las tecnologías utilizadas para
+        crear este sitio web.
+    </p>
+
+    <div class="tarjetas">
+
+        <div class="tarjeta">
+            <div class="icono">🐎</div>
+            <h3>Para tu caballo</h3>
+            <p>
+                Accesorios y productos pensados
+                para el cuidado de tu compañero.
+            </p>
+        </div>
+
+        <div class="tarjeta">
+            <div class="icono">💻</div>
+            <h3>Tecnología web</h3>
+            <p>
+                Aprende sobre JavaScript, jQuery,
+                JSON, hosting y dominios.
+            </p>
+        </div>
+
+        <div class="tarjeta">
+            <div class="icono">⭐</div>
+            <h3>Aprende jugando</h3>
+            <p>
+                Pon a prueba tus conocimientos
+                con nuestro cuestionario.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="productos" id="productos">
+
+    <p class="etiqueta">PRODUCTOS</p>
+    <h2>Productos destacados</h2>
+
+    <div class="productos-grid">
+
+        <div class="producto">
+            <div class="producto-imagen">🐴</div>
+            <div class="producto-info">
+                <h3>Montura Vaquera</h3>
+                <p>Montura cómoda para cabalgatas.</p>
+                <strong>$350.00</strong>
+                <button onclick="agregarProducto('Montura Vaquera')">
+                    Agregar
+                </button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <div class="producto-imagen">🤠</div>
+            <div class="producto-info">
+                <h3>Sombrero Vaquero</h3>
+                <p>Estilo clásico para el jinete.</p>
+                <strong>$30.00</strong>
+                <button onclick="agregarProducto('Sombrero Vaquero')">
+                    Agregar
+                </button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <div class="producto-imagen">🧤</div>
+            <div class="producto-info">
+                <h3>Guantes para Jinete</h3>
+                <p>Comodidad y buen agarre.</p>
+                <strong>$25.00</strong>
+                <button onclick="agregarProducto('Guantes para Jinete')">
+                    Agregar
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="contador-compra">
+        🛒 Productos agregados:
+        <span id="contador">0</span>
+    </div>
+
+</section>
+
+<section class="tecnologias">
+
+    <p class="etiqueta">TECNOLOGÍAS</p>
+    <h2>¿Cómo funciona esta página?</h2>
+
+    <div class="tecnologias-grid">
+
+        <a href="javascript.html">
+            <span>JS</span>
+            <h3>JavaScript</h3>
+            <p>Agrega interacción y funciones.</p>
+        </a>
+
+        <a href="jquery.html">
+            <span>JQ</span>
+            <h3>jQuery</h3>
+            <p>Facilita el trabajo con JavaScript.</p>
+        </a>
+
+        <a href="json.html">
+            <span>{ }</span>
+            <h3>JSON</h3>
+            <p>Organiza y almacena información.</p>
+        </a>
+
+        <a href="hosting.html">
+            <span>WEB</span>
+            <h3>Hosting</h3>
+            <p>Permite publicar el sitio.</p>
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    <h2>🐴 EquiSports</h2>
+    <p>Pasión, tecnología y aventura.</p>
+    <p>© 2026 EquiSports</p>
+</footer>
+
+<script src="script.jse" type="text/javascript"></script>
+
+</body>
+</html>

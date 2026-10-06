@@ -1,0 +1,177 @@
+/* =====================================
+   EQUISPORTS
+   Archivo principal de JavaScript
+   ===================================== */
+
+
+/* CONTADOR DE PRODUCTOS */
+
+let cantidadProductos = 0;
+
+function agregarProducto(nombre) {
+
+    cantidadProductos++;
+
+    const contador = document.getElementById("contador");
+
+    if (contador) {
+        contador.textContent = cantidadProductos;
+    }
+
+    alert(
+        "🐴 " + nombre +
+        " fue agregado correctamente.\n\n" +
+        "Productos en tu compra: " +
+        cantidadProductos
+    );
+}
+
+
+/* JAVASCRIPT */
+
+function mostrarMensaje() {
+
+    alert(
+        "¡Hola! 👋\n\n" +
+        "Este mensaje fue creado utilizando JavaScript."
+    );
+}
+
+
+/* JQUERY - SIMULACIÓN DE UNA FUNCIÓN */
+
+function cambiarTexto() {
+
+    const texto = document.getElementById("textoJquery");
+
+    if (texto) {
+
+        texto.textContent =
+            "¡El texto cambió gracias a una función interactiva! 🐴";
+
+        texto.style.color = "#596B45";
+        texto.style.fontWeight = "bold";
+    }
+}
+
+
+/* JSON */
+
+function mostrarJSON() {
+
+    const producto = {
+
+        nombre: "Montura Vaquera",
+        precio: 350,
+        categoria: "Caballo",
+        disponible: true
+
+    };
+
+    const resultado =
+        document.getElementById("productoJson");
+
+    if (resultado) {
+
+        resultado.innerHTML =
+            "<strong>Producto:</strong> " +
+            producto.nombre +
+            "<br><strong>Precio:</strong> $" +
+            producto.precio +
+            "<br><strong>Categoría:</strong> " +
+            producto.categoria +
+            "<br><strong>Disponible:</strong> Sí";
+    }
+}
+
+
+/* HOSTING */
+
+function mostrarHosting() {
+
+    alert(
+        "🌐 Para publicar EquiSports necesitamos:\n\n" +
+        "1. Los archivos de la página.\n" +
+        "2. Un servicio de hosting.\n" +
+        "3. Un dominio.\n\n" +
+        "Así otras personas podrán visitar el sitio."
+    );
+}
+
+
+/* CUESTIONARIO */
+
+function calificarQuiz() {
+
+    let puntos = 0;
+
+    const preguntas = [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5"
+    ];
+
+    preguntas.forEach(function(nombre) {
+
+        const respuesta =
+            document.querySelector(
+                'input[name="' + nombre + '"]:checked'
+            );
+
+        if (respuesta && respuesta.value === "correcto") {
+            puntos++;
+        }
+
+    });
+
+    const resultado =
+        document.getElementById("resultado");
+
+    if (!resultado) {
+        return;
+    }
+
+    resultado.style.display = "block";
+
+    let mensaje = "";
+
+    if (puntos === 5) {
+
+        mensaje =
+            "🏆 ¡Excelente! Sacaste 5 de 5.";
+
+    } else if (puntos >= 3) {
+
+        mensaje =
+            "👏 ¡Muy bien! Sacaste " +
+            puntos +
+            " de 5.";
+
+    } else {
+
+        mensaje =
+            "📚 Sacaste " +
+            puntos +
+            " de 5. ¡Sigue estudiando!";
+    }
+
+    resultado.textContent = mensaje;
+
+    window.scrollTo({
+        top: resultado.offsetTop - 100,
+        behavior: "smooth"
+    });
+}
+
+
+/* MENSAJE AL CARGAR */
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    console.log(
+        "EquiSports cargó correctamente."
+    );
+
+});
